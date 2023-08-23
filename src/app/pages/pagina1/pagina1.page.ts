@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagina1',
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Pagina1Page implements OnInit {
 
-  constructor() { }
+  usuarioRecibido: string = "";
+  edadRecibida: number = 0;
+
+  constructor(private router: Router, private activatedRouter: ActivatedRoute) {
+    this.activatedRouter.queryParams.subscribe(param=>{
+      if(this.router.getCurrentNavigation()?.extras.state ){
+        this.edadRecibida = this.router.getCurrentNavigation()?.extras?.state?.['edadRecibida'];
+        this.usuarioRecibido = this.router.getCurrentNavigation()?.extras?.state?.['usuarioEnviado'];
+
+      }
+    })
+
+  }
+
 
   ngOnInit() {
   }

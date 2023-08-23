@@ -1,34 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      Inicio de sesión
+      Inicio de Sesión
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
+  <div class="ion-padding-vertical">
+    <ion-card class="ion-text-center">
+      <ion-card-title>
+        <ion-label>
+          <h2>Inicio de Sesión {{ nombreUsuario }}</h2>
+        </ion-label>
+      </ion-card-title>
 
-      <ion-title size="large">Iniciar Sesión:</ion-title>
-      <br>
-    </ion-toolbar>
-  </ion-header>
+      <!--  investigar como poner variables en vez de valores planos  -->
+      <app-componente1 nomb="Juan" apelli="Pepe Moco"> </app-componente1>
 
-  <div id="container">
-    
-    <ion-card>
-      <strong>Iniciar Sesión:</strong>
-      <br>
-      <div><label for="user_name"></label> <input class="ion-text-center" type="text" placeholder="Nombre de usuario"></div>
-      <br>
-      <div><label for="user_name"></label> <input class="ion-text-center" type="password" placeholder="Contraseña"></div>
-      <br>
-      <ion-button [routerLink]="['/pagina1']">Iniciar Sesión:</ion-button>
-      <br>
-      <ion-button fill="solid">Salir</ion-button>
-  
+
+      <ion-card-content>
+
+      <!--  condicionales aquí, ejemplo si es o no es admin  -->
+        <ion-item *ngIf="edadP > 18">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="nom"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-card-content>
+      <ion-button shape="block" [routerLink]="['/pagina1']">Loguear {{ nom }}</ion-button>
+      <ion-button shape="block" (click)="irPagina1()">Loguear2</ion-button>
     </ion-card>
-    
+
   </div>
 </ion-content>
