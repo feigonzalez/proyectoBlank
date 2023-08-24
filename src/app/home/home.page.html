@@ -41,8 +41,13 @@
 
     <ion-card class="ion-text-center">
       <ion-item *ngFor="let p of listaPersonas">
-        <ion-label>Nombre: {{p.nombre}} {{p.apellido}}</ion-label>
+        <ion-label>Nombre: {{p.nombre | uppercase }} {{p.apellido | lowercase }}</ion-label>
+        <ion-label>Sueldo: {{p.sueldo | currency:'USD'}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha actual: {{date | date:'dd-MM-yyyy'}}</ion-label>
       </ion-item>
     </ion-card>
   </div>
+  <app-gesture></app-gesture>
 </ion-content>

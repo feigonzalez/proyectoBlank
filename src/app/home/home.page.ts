@@ -12,17 +12,20 @@ export class HomePage {
 //comentario
   nombreUsuario: string = "Victor";
   edadP: number = 30;
+  date: Date = new Date();
   //user = "Adriana";
   listaPersonas: any = [
     {
       nombre: "Maria",
       edad: 34,
-      apellido: "Josefa"
+      apellido: "Josefa",
+      sueldo: 550000
     },
     {
       nombre: "Mario",
       edad: 34,
-      apellido: "Josefo"
+      apellido: "Josefo",
+      sueldo: 480000
     }
   ];
 

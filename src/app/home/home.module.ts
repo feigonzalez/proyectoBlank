@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { Componente1Component } from '../components/componente1/componente1.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { GestureComponent } from '../components/gesture/gesture.component';
 
 
 @NgModule({
@@ -17,6 +18,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     HomePageRoutingModule,
     MatProgressSpinnerModule
   ],
-  declarations: [HomePage,Componente1Component]
+  declarations: [HomePage,Componente1Component,GestureComponent]
 })
 export class HomePageModule {}
