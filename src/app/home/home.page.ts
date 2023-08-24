@@ -18,6 +18,11 @@ export class HomePage {
       nombre: "Maria",
       edad: 34,
       apellido: "Josefa"
+    },
+    {
+      nombre: "Mario",
+      edad: 34,
+      apellido: "Josefo"
     }
   ];
 

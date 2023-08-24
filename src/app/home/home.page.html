@@ -39,5 +39,10 @@
       <ion-button shape="block" (click)="irPagina1()">Loguear2</ion-button>
     </ion-card>
 
+    <ion-card class="ion-text-center">
+      <ion-item *ngFor="let p of listaPersonas">
+        <ion-label>Nombre: {{p.nombre}} {{p.apellido}}</ion-label>
+      </ion-item>
+    </ion-card>
   </div>
 </ion-content>
