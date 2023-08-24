@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChildren, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChildren, ViewChild, Input } from '@angular/core';
 import { AnimationController, GestureController, IonCard } from '@ionic/angular';
 import type { Animation, Gesture, GestureDetail } from '@ionic/angular';
 
@@ -10,6 +10,7 @@ import type { Animation, Gesture, GestureDetail } from '@ionic/angular';
 export class GestureComponent  implements OnInit {
   @ViewChild(IonCard, { read: ElementRef }) card?: ElementRef<HTMLIonCardElement>;
 
+  @Input() uname:string="";
   private animation!: Animation;
   private gesture?: Gesture;
   private started = false;
