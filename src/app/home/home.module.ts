@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { Componente1Component } from '../components/componente1/componente1.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { GestureComponent } from '../components/gesture/gesture.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { GestureComponent } from '../components/gesture/gesture.component';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatRadioModule
   ],
   declarations: [HomePage,Componente1Component,GestureComponent]
 })
