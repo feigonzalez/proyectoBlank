@@ -32,7 +32,9 @@ export class HomePage {
 
   nom : string = "";
 
-  constructor(private toastController: ToastController,private router: Router,private alertController: AlertController) {}
+  constructor(private toastController: ToastController,private router: Router,private alertController: AlertController) {
+    localStorage.setItem( 'juan',this.nombreUsuario);
+  }
 
   async presentToast(position: 'top' | 'middle' | 'bottom') {
     const toast = await this.toastController.create({
